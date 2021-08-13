@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Faceuser</title>
+        <link rel="stylesheet" type="text/css" th:href="@{'/css/bootstrap.min.css'}">
+    </head>
+    <body>
+        <div class="container">
+            <div th:insert="~{layout/navbar.html}">
+            </div>
+        </div>
+        <div class="container" style="min-height: 800px;">
+            <div class="row mt-3">
+                <div class="col-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">About Us</a>
+                        <a href="#" class="list-group-item list-group-item-action">Sign In</a>
+                        <a href="#" class="list-group-item list-group-item-action">Sign Up</a>
+                        <a href="#" class="list-group-item list-group-item-action">FAQ</a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div layout:fragment="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div th:insert="~{layout/footer.html}"></div>
+        </div>
+        <script type="text/javascript" th:src="@{'/js/bootstrap.min.js'}"></script>
+    </body>
+</html>
